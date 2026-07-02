@@ -1,0 +1,9 @@
+com\springcore\basicspringapp\HelloWorld.class
+com\springcore\basicspringapp\MainApp.class
+com\springcore\mavenproject\MainApp.class
+com\springcore\dependencyinjection\Address.class
+com\springcore\ioccontainer\Employee.class
+com\springcore\dependencyinjection\Student.class
+com\springcore\dependencyinjection\MainApp.class
+com\springcore\ioccontainer\MainApp.class
+com\springcore\mavenproject\MavenApp.class

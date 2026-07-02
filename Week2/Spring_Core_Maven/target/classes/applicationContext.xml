@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Exercise 1 -->
+    <bean id="helloBean"
+          class="com.springcore.basicspringapp.HelloWorld"/>
+
+    <!-- Exercise 2 -->
+    <bean id="address"
+          class="com.springcore.dependencyinjection.Address">
+        <property name="city" value="Chennai"/>
+    </bean>
+
+    <bean id="student"
+          class="com.springcore.dependencyinjection.Student">
+        <property name="name" value="Nethiya Sree"/>
+        <property name="address" ref="address"/>
+    </bean>
+
+    <!-- Exercise 4 -->
+    <bean id="mavenApp"
+          class="com.springcore.mavenproject.MavenApp"/>
+
+    <!-- Exercise 5 -->
+    <bean id="employee"
+          class="com.springcore.ioccontainer.Employee">
+        <property name="id" value="101"/>
+        <property name="name" value="Nethiya Sree"/>
+    </bean>
+
+</beans>

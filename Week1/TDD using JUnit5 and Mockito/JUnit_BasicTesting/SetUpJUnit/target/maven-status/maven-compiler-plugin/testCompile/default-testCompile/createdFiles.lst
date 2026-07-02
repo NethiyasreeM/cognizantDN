@@ -1,1 +1,6 @@
+UserService.class
+AssertionTest.class
 SetupJUnitTest.class
+AAATest.class
+MockitoTest.class
+VerifyTest.class

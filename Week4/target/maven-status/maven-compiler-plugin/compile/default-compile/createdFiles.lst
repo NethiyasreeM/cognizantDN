@@ -1,0 +1,6 @@
+com\microservices\loan\LoanController.class
+com\microservices\MicroservicesApplication.class
+com\microservices\account\Account.class
+com\microservices\gateway\GatewayConfig.class
+com\microservices\loan\Loan.class
+com\microservices\account\AccountController.class

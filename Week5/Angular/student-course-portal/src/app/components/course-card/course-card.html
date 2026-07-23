@@ -1,0 +1,73 @@
+<div
+  class="card"
+  [appHighlight]="'lightyellow'"
+  [ngClass]="cardClasses"
+  [ngStyle]="{'border-left':'6px solid ' + getBorderColor()}">
+
+<h3>{{ course.name }}</h3>
+
+<p><b>ID :</b> {{ course.id }}</p>
+
+<p><b>Code :</b> {{ course.code }}</p>
+
+<p><b>Credits :</b> {{ course.credits | creditLabel }}</p>
+
+<div [ngSwitch]="course.gradeStatus">
+
+<span
+*ngSwitchCase="'passed'"
+class="status"
+style="background:green;">
+
+Passed
+
+</span>
+
+<span
+*ngSwitchCase="'failed'"
+class="status"
+style="background:red;">
+
+Failed
+
+</span>
+
+<span
+*ngSwitchCase="'pending'"
+class="status"
+style="background:gray;">
+
+Pending
+
+</span>
+
+</div>
+
+<br>
+
+<button (click)="enroll()">
+
+Enroll
+
+</button>
+
+<button (click)="toggleDetails()">
+
+Show Details
+
+</button>
+
+<div *ngIf="isExpanded">
+
+<hr>
+
+<p>
+
+This course contains assignments,
+projects and assessments.
+
+</p>
+
+</div>
+
+</div>

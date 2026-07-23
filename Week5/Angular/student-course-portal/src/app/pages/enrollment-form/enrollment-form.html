@@ -1,0 +1,159 @@
+<h2>Student Enrollment Form</h2>
+
+<form #enrollForm="ngForm"
+      (ngSubmit)="onSubmit(enrollForm)">
+
+  <!-- Student Name -->
+
+  <div>
+
+    <label for="studentName">
+
+      Student Name
+
+    </label>
+
+    <br><br>
+
+    <input
+      id="studentName"
+      type="text"
+      name="studentName"
+      [(ngModel)]="studentName"
+      #name="ngModel"
+      required
+      minlength="3">
+
+    <div
+      *ngIf="name.invalid && name.touched"
+      style="color:red;">
+
+      <small *ngIf="name.errors?.['required']">
+
+        Student Name is required.
+
+      </small>
+
+      <small *ngIf="name.errors?.['minlength']">
+
+        Minimum 3 characters required.
+
+      </small>
+
+    </div>
+
+  </div>
+
+  <br>
+
+  <!-- Email -->
+
+  <div>
+
+    <label for="studentEmail">
+
+      Email
+
+    </label>
+
+    <br><br>
+
+    <input
+      id="studentEmail"
+      type="email"
+      name="studentEmail"
+      [(ngModel)]="studentEmail"
+      #email="ngModel"
+      required
+      email>
+
+    <div
+      *ngIf="email.invalid && email.touched"
+      style="color:red;">
+
+      <small *ngIf="email.errors?.['required']">
+
+        Email is required.
+
+      </small>
+
+      <small *ngIf="email.errors?.['email']">
+
+        Enter a valid Email Address.
+
+      </small>
+
+    </div>
+
+  </div>
+
+  <br>
+
+  <!-- Course -->
+
+  <div>
+
+    <label for="course">
+
+      Course
+
+    </label>
+
+    <br><br>
+
+    <select
+      id="course"
+      name="course"
+      [(ngModel)]="course"
+      #courseRef="ngModel"
+      required>
+
+      <option value="">Select Course</option>
+
+      <option>Angular</option>
+
+      <option>Java</option>
+
+      <option>Spring Boot</option>
+
+      <option>Python</option>
+
+      <option>Database Management</option>
+
+    </select>
+
+    <div
+      *ngIf="courseRef.invalid && courseRef.touched"
+      style="color:red;">
+
+      <small>
+
+        Please select a course.
+
+      </small>
+
+    </div>
+
+  </div>
+
+  <br><br>
+
+  <button
+    type="submit"
+    [disabled]="enrollForm.invalid">
+
+    Submit
+
+  </button>
+
+</form>
+
+<br>
+
+<p
+style="color:green;
+font-weight:bold;">
+
+{{ message }}
+
+</p>

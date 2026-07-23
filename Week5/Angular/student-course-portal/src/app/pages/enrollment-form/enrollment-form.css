@@ -1,0 +1,49 @@
+h2{
+    color:#1565c0;
+    margin-bottom:20px;
+}
+
+form{
+    width:450px;
+    padding:20px;
+    border:1px solid #cccccc;
+    border-radius:8px;
+    background:#f8f9fa;
+}
+
+label{
+    font-weight:bold;
+}
+
+input,
+select{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    border:1px solid #cccccc;
+    border-radius:4px;
+    box-sizing:border-box;
+}
+
+button{
+    background:#1976d2;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:disabled{
+    background:gray;
+    cursor:not-allowed;
+}
+
+small{
+    display:block;
+    margin-top:5px;
+}
+
+p{
+    font-size:18px;
+}

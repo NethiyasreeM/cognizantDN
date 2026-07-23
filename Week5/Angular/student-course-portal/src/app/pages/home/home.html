@@ -1,0 +1,23 @@
+
+
+
+<p><strong>Total Courses:</strong> {{ courseCount }}</p>
+
+<button
+  [disabled]="!isPortalActive"
+  (click)="onEnrollClick()">
+  Enroll Now
+</button>
+
+<p>{{ message }}</p>
+
+<hr>
+
+<label for="search">Search Course:</label>
+
+<input
+  id="search"
+  type="text"
+  [(ngModel)]="searchTerm">
+
+<p>Searching for: {{ searchTerm }}</p>
